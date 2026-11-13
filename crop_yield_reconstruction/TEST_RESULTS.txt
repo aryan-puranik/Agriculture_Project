@@ -1,0 +1,16 @@
+Offline reconstruction test results
+
+Command: python -m pytest -q
+Result: 7 tests passed
+Test categories:
+- FAOSTAT India/total/area-of-cropland/kg-ha filtering and duplicate detection
+- Soil order parsing and pH weighting
+- NASA POWER yearly value parsing and leap-year precipitation conversion
+- Duplicate district-year key detection
+- End-to-end raw-source fixture -> research CSV + 15-column legacy CSV + provenance -> audit
+- Invalid yield record exclusion
+- Primary source failure -> labelled GitHub raw mirror with SHA-256 manifest
+
+IMPORTANT: Integration tests use synthetic fixture inputs. Real ICRISAT/NASA/FAOSTAT
+endpoints and the 198,369-row published dataset were not downloadable from this
+execution environment and have NOT been successfully fetched/tested here.
